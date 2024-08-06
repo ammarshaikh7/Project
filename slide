@@ -1,0 +1,435 @@
+<html>
+    <head>
+        <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+    .carousel slide{
+        transition: transform 2s linear;
+    }
+    .container-fluid{
+    transition: transform 2s linear;
+   }
+.hs{
+    color: white;
+}
+.caption{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: aqua;
+   
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+    background-color: rgb(219, 219, 214);
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; 
+    padding: 0px; 
+    display: flex;
+    color: black;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0%;
+    color: black;
+   
+}
+.logo {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    background-color: whitesmoke;
+}
+.logo1 {
+    background-color: #791111;
+    color: #c4bbbb;
+    display:flex;
+    padding-top: 15px;
+    margin: 0; 
+    gap: 20px;
+   
+ 
+
+}
+.container{
+  
+    width: 1000%;
+    background-size:auto;   
+    padding-bottom: 30px;
+}
+.container1{
+  
+  width: 30%;
+  background-size:auto;   
+  padding-bottom: 30px;
+}
+.button{
+  background-color: yellow;
+  color: rgb(17, 18, 19);
+  align-self: center;
+}
+.button1{
+  background-color: blue;
+  color: aliceblue;
+  width: 150px;
+  
+  padding-bottom: 10px;
+}
+.searchbox{
+  width: 400px;
+  color: blue;
+}
+.text{
+  color: black;
+}
+.text:hover {
+  color: blue;
+ 
+}
+.item{
+  height: 90%;
+  width: 130%;
+}
+.buttonhover:hover{
+  color: lightskyblue;
+}
+.hoverbutton:hover{
+  color: whitesmoke;
+background-color: blue;
+}
+.row{
+  width:800px;
+}
+.video{
+  float:right;
+  display: flex;
+  flex:33.3%;
+}
+
+.hide {
+  display: none;
+}
+    
+.myDIV:hover .hide {
+  display: block;
+  color: red;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+/* show 3 items */
+.carousel-inner .active,
+.carousel-inner .active + .carousel-item,
+.carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+}
+
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+}
+
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 1200px;
+            height: 600px;
+            z-index: 1;
+            background-color: #f1f1f1;
+            margin-left: -45%;
+        }
+
+        .dropdown-content div {
+            color: black;
+            display: block;
+            text-decoration: none;
+            padding: 12px 16px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+/* left or forward direction */
+.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.carousel-item-next.carousel-item-left + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.carousel-item-prev.carousel-item-right + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}
+
+}
+
+
+</style>
+          <title>Bootstrap Example</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+
+          <script type="text/javascript">
+            $('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+        </script>
+</head>
+<body>
+          <nav class="navbar">
+            <div class="logo" > </div> 
+             <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+
+                           
+             <ul class="nav-links">
+            
+            <li><a href="#" class="text">Resources</a></li>
+            <li><a href="#" class="text">Simplilearn for Business</a></li>
+            <li><a href="#" class="text">Become an Instructor</a></li>
+            <li><a href="#" class="text">Hire From Us</a></li>
+             <li><a href="#" class="text">Reviews</a></li>
+             </ul>
+            </nav>
+            <nav class="logo">
+             <div class="logo1"> </div>
+             <div></div>
+
+             <ul class="logo">
+            <li><img width=150px height=60px src="new_logo.svgz"></li>
+            <li><div><button class="button1"><span class="glyphicon glyphicon-th"></span><span> </span>All Courses</button></div></li>
+            <li class="search"><label class="searchbox">
+              
+              <div class="row">
+                <div class="col-md-5 mx-2">
+                    <div class="small fw-light"></div>
+                    <div class="input-group">
+                        <form><div><input class="form-control border-end-0 border rounded-pill" type="search" placeholder="what do you want to learn?" id="example-search-input">
+                        
+                        
+                        <span class="input-group-append">
+                          <button class="hoverbutton" type="button">
+                              <i class="fa fa-search"></i>
+                          </button>
+                        </span></div>
+
+
+
+
+                        
+                        </form>
+                    </div>
+                </div>
+            </div></div></label></li>
+            <li><button class="buttonhover">Log In</button></li>
+             </ul>
+            </nav>
+          
+            
+
+
+
+
+
+
+
+
+        <div class="container">
+         
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img width=2000px src="banner-right-web.webp" alt="Los Angeles">
+                <div class="caption">
+                 <div>
+                  <div>
+                    <div><h1>All our top programs include <br> Generative AI Components</h1>
+                      
+                      <h2>Be a leader in your field <br> Change, Adapt and Build with AI</h2>
+                      
+                      <button class="button">Explore Gen AI Programs</button>
+                    </div>
+                  </div>
+                 </div>
+                </div>             
+             </div>
+        
+              <div class="item">
+                <img src="banner_v1.jpg" alt="Chicago" width=2000px; height="5000px">
+                <div class="caption">
+                  <div>
+                    <div><div><h2>World’s #1<br>Online Bootcamp</h2>
+                      <p>5,000,000 careers advanced<br>1,500 live classes every month<br>85% report career benefits including promotion or a new job</p>
+                      <button class="button">Explore Programs</button>
+                    
+                      
+                      <video class="video" width="400" controls>
+                        <source src="video.mp4" type="video/mp4">
+                      </video>
+                    
+                    </div></div>
+                  </div>
+                </div>
+                
+              </div>
+            
+              
+             
+            </div>
+            
+            <!-- Left and right controls --->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <p style="text-align: center;">Partnering with world's leading universities and companies</p>
+        </div>
+        
+        
+        
+        
+
+
+        <div class="container-fluid">
+          <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="3000">
+              <div class="carousel-inner row w-100 mx-2" role="listbox">
+                  <div class="carousel-item col-md-3 active">
+                      <img class="img-fluid mx-auto d-block" src="AWS_Home.svg" alt="slide 1">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="Miscrosoft_Home.svg" alt="slide 2">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="IITG_Home.svg" alt="slide 3">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="SPJain_Home.svg" alt="slide 4">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="Purdue_Home.svg" alt="slide 5">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="iitkanpur_Home (1).svg" alt="slide 6">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="iitRoorkee_Home.svg" alt="slide 7">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                      <img class="img-fluid mx-auto d-block" src="iimindore_Home.svg" alt="slide 8">
+                  </div>
+                  <div class="carousel-item col-md-3">
+                    <img class="img-fluid mx-auto d-block" src="iitmadras_Home.svg" alt="slide 9">
+                </div>
+                <div class="carousel-item col-md-3">
+                  <img class="img-fluid mx-auto d-block" src="Caltech_Home.svg" alt="slide 10">
+              </div>
+              <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="iiitb_Home.svg" alt="slide 11">
+            </div>
+              </div>
+              
+          </div>
+      </div>
+        </body>
+</html>
